@@ -6,11 +6,14 @@ import { NotFoundComponent } from './shared/components/not-found/not-found.compo
 
 const routes: Routes = [
   {
-    path: '', component:ComingSoonComponent
+    path: 'coming-soon', component:ComingSoonComponent
   },
   {
     path: 'login', component:AuthComponent
   },
+  {
+    path: '',
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
   {
     path: '404', component:NotFoundComponent
   },

@@ -7,6 +7,7 @@ module.exports = {
         primaryYellow: '#F7D861',
         primaryGreen: '#2B5B5D',
         orange: '#F1753F',
+        textYellow: '#E8AF02'
       },
       fontFamily: {
         'text': ['FoundersRegular', 'sans-serif'],

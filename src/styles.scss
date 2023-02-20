@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "FoundersRegular";
+  font-style: normal;
+  src: url(assets/fonts/FoundersGrotesk-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "FoundersBold";
+  font-style: normal;
+  src: url(assets/fonts/FoundersGrotesk-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: "SkModernistRegular";
+  font-style: normal;
+  src: url(assets/fonts/Sk-Modernist-Regular.woff) format("woff");
+}
+@font-face {
+  font-family: "SkModernistBold";
+  font-style: normal;
+  src: url(assets/fonts/Sk-Modernist-Bold.woff) format("woff");
+}

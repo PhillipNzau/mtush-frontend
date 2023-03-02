@@ -43,4 +43,13 @@ html {
 }
 body {
   box-sizing: border-box;
+  @apply text-primaryGreen;
+}
+// Swiper
+.swiper {
+  width: 100% !important;
+}
+
+.swiper-slide {
+  width: auto !important;
 }

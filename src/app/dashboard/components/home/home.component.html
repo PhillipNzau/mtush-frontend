@@ -1,4 +1,4 @@
-<section class=" w-screen bg-[#FAF3E6] font-textFont">
+<section class=" w-screen bg-[#FAF3E6]">
   <div class="bg-primaryYellow rounded-b-3xl py-6 px-10">
     <div class="flex justify-between">
       <img src="./assets/img/logo.svg" alt="Mtush logo" width="65" height="61">
@@ -24,7 +24,7 @@
       class="before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-primaryYellow before:rounded-2xl relative inline-block"> <span
       class="relative">Mtush</span></span> at cheaper prices</h1>
 
-    <button class=" py-7 px-11 bg-primaryGreen rounded-full text-primaryYellow text-2xl ">Start Shopping</button>
+    <button class="bg-primaryGreen text-primaryYellow py-7 px-11  rounded-full text-2xl font-bold text-headingFont ">Start Shopping</button>
 
     <div class="h-[24rem]">
       <img class="" src="./assets/img/jeans.webp" alt="Mtush image image" width="264" height="286">
@@ -32,19 +32,193 @@
   </div>
 </section>
 
-<section class="px-8 mt-44">
-  <div class="flex items-center justify-between text-2xl text-primaryGreen font-bold">
+<section class="px-8 mt-44 py-4">
+  <div class="flex items-center justify-between text-3xl text-primaryGreen font-bold text-headingFont mb-10">
     <p>Popular Sellers</p>
     <p class="flex items-center gap-x-2">See All
-      <span>
-      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M4.625 12.6667H22.0417" stroke="#2B5B5D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M14.9167 5.54166L22.0417 12.6667L14.9167 19.7917" stroke="#2B5B5D" stroke-width="2" stroke-linecap="round"
-              stroke-linejoin="round"/>
-      </svg>
-    </span>
+      <img src="./assets/img/arrow-right.svg" alt="Arrow right" width="26" height="26">
     </p>
   </div>
+  <!-- The slider-->
+  <swiper
+    [slidesPerView]="'auto'"
+    [spaceBetween]="10">
 
+    <ng-template swiperSlide>
+      <div class="text-xl space-y-8">
+        <img class="" src="./assets/img/item.png" alt="Shop Items" width="131" height="220">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between mt-6-4">
+            <p class="">KES 250</p>
+            <p class="flex items-center gap-x-2 ">
+              <img class src="./assets/img/selected-fav.svg" alt="Selected fav" width="16" height="14">
+              7
+            </p>
+          </div>
+          <p>Size: L</p>
+          <p>Nike</p>
+          <p>Adams Arcade, Nairobi</p>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="text-xl space-y-8">
+        <img class="" src="./assets/img/item.png" alt="Shop Items" width="131" height="220">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between mt-6-4">
+            <p class="">KES 250</p>
+            <p class="flex items-center gap-x-2 ">
+              <img class src="./assets/img/selected-fav.svg" alt="Selected fav" width="16" height="14">
+              7
+            </p>
+          </div>
+          <p>Size: L</p>
+          <p>Nike</p>
+          <p>Adams Arcade, Nairobi</p>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="text-xl space-y-8">
+        <img class="" src="./assets/img/item.png" alt="Shop Items" width="131" height="220">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between mt-6-4">
+            <p class="">KES 250</p>
+            <p class="flex items-center gap-x-2 ">
+              <img class src="./assets/img/selected-fav.svg" alt="Selected fav" width="16" height="14">
+              7
+            </p>
+          </div>
+          <p>Size: L</p>
+          <p>Nike</p>
+          <p>Adams Arcade, Nairobi</p>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="text-xl space-y-8">
+        <img class="" src="./assets/img/item.png" alt="Shop Items" width="131" height="220">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between mt-6-4">
+            <p class="">KES 250</p>
+            <p class="flex items-center gap-x-2 ">
+              <img class src="./assets/img/selected-fav.svg" alt="Selected fav" width="16" height="14">
+              7
+            </p>
+          </div>
+          <p>Size: L</p>
+          <p>Nike</p>
+          <p>Adams Arcade, Nairobi</p>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
 </section>
 
+<section class="px-8 mt-10 py-4">
+  <p class="text-3xl font-bold text-headingFont">Shop by Brand</p>
+  <div class="mt-[1.6rem] space-x-3 space-y-6">
+    <button class="outline outline-1 rounded-full py-5 px-8 text-[1.2rem]">Nike</button>
+    <button class="outline outline-1 rounded-full py-5 px-8 text-[1.2rem]">Ralph Lauren</button>
+    <button class="outline outline-1 rounded-full py-5 px-8 text-[1.2rem]">Adidas</button>
+    <button class="outline outline-1 rounded-full py-5 px-8 text-[1.2rem]">New Balance</button>
+    <button class="outline outline-1 rounded-full py-5 px-8 text-[1.2rem]">Puma</button>
+    <button class="outline outline-1 rounded-full py-5 px-8 text-[1.2rem]">Vans</button>
+    <button class="outline outline-1 rounded-full py-5 px-8 text-[1.2rem]">Burberry</button>
+    <button class="outline outline-1 rounded-full py-5 px-8 text-[1.2rem]">Tommy Hilfiger</button>
+    <button class="outline outline-1 rounded-full py-5 px-8 text-[1.2rem]">Reebok</button>
+  </div>
+</section>
+
+<section class="px-8 mt-16 py-4 bg-orange h-[50rem] py-[4.4rem] text-center space-y-[4rem]">
+  <p class="text-white text-[3.2rem] font-bold text-textFont leading-[4rem]">Sell your gently used clothes and make space for new items.</p>
+  <button class=" bg-white py-[1.3rem] px-[4.7rem]  rounded-full text-[1.6rem] font-bold text-headingFont">Sign Up</button>
+  <img src="./assets/img/cta.webp" alt="Jackets shirts" width="303" height="202">
+</section>
+
+<section class="px-8 mt-[5.1rem] py-4">
+  <div class="flex items-center justify-between text-3xl text-primaryGreen font-bold text-headingFont mb-10">
+    <p>Shop Popular Items</p>
+    <p class="flex items-center gap-x-2">See All
+      <img src="./assets/img/arrow-right.svg" alt="Arrow right" width="26" height="26">
+    </p>
+  </div>
+  <!-- The slider-->
+  <swiper
+    [slidesPerView]="'auto'"
+    [spaceBetween]="10">
+
+    <ng-template swiperSlide>
+      <div class="text-xl space-y-8">
+        <img class="" src="./assets/img/item.png" alt="Shop Items" width="131" height="220">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between mt-6-4">
+            <p class="">KES 250</p>
+            <p class="flex items-center gap-x-2 ">
+              <img class src="./assets/img/selected-fav.svg" alt="Selected fav" width="16" height="14">
+              7
+            </p>
+          </div>
+          <p>Size: L</p>
+          <p>Nike</p>
+          <p>Adams Arcade, Nairobi</p>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="text-xl space-y-8">
+        <img class="" src="./assets/img/item.png" alt="Shop Items" width="131" height="220">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between mt-6-4">
+            <p class="">KES 250</p>
+            <p class="flex items-center gap-x-2 ">
+              <img class src="./assets/img/selected-fav.svg" alt="Selected fav" width="16" height="14">
+              7
+            </p>
+          </div>
+          <p>Size: L</p>
+          <p>Nike</p>
+          <p>Adams Arcade, Nairobi</p>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="text-xl space-y-8">
+        <img class="" src="./assets/img/item.png" alt="Shop Items" width="131" height="220">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between mt-6-4">
+            <p class="">KES 250</p>
+            <p class="flex items-center gap-x-2 ">
+              <img class src="./assets/img/selected-fav.svg" alt="Selected fav" width="16" height="14">
+              7
+            </p>
+          </div>
+          <p>Size: L</p>
+          <p>Nike</p>
+          <p>Adams Arcade, Nairobi</p>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div class="text-xl space-y-8">
+        <img class="" src="./assets/img/item.png" alt="Shop Items" width="131" height="220">
+        <div class="space-y-3">
+          <div class="flex items-center justify-between mt-6-4">
+            <p class="">KES 250</p>
+            <p class="flex items-center gap-x-2 ">
+              <img class src="./assets/img/selected-fav.svg" alt="Selected fav" width="16" height="14">
+              7
+            </p>
+          </div>
+          <p>Size: L</p>
+          <p>Nike</p>
+          <p>Adams Arcade, Nairobi</p>
+        </div>
+      </div>
+    </ng-template>
+  </swiper>
+</section>
+
+<footer class="mt-[12rem] bg-secondaryGreen h-[41.5rem]" >
+
+</footer>

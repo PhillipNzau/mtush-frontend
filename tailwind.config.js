@@ -6,17 +6,18 @@ module.exports = {
       colors: {
         primaryYellow: '#F7D861',
         primaryGreen: '#2B5B5D',
+        secondaryGreen: '#154726',
         orange: '#F1753F',
         textYellow: '#E8AF02'
       },
       fontFamily: {
-        'text': ['FoundersRegular', 'sans-serif'],
-        'heading': ['SkModernistRegular', 'serif'],
+        'textFont': ['FoundersRegular', 'sans-serif'],
+        'headingFont': ['SkModernistRegular', 'serif'],
         'textBold': ['FoundersBold', 'sans-serif'],
         'headingBold': ['SkModernistBold', 'serif'],
       }
     },
 
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

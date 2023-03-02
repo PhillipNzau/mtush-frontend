@@ -11,5 +11,6 @@ import {RouterLink} from "@angular/router";
 })
 export class AuthComponent {
   login: boolean= false;
+  viewPwd: boolean= false;
 
 }

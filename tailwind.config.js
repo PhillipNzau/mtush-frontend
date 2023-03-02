@@ -10,8 +10,8 @@ module.exports = {
         textYellow: '#E8AF02'
       },
       fontFamily: {
-        'text': ['FoundersRegular', 'sans-serif'],
-        'heading': ['SkModernistRegular', 'serif'],
+        'textFont': ['FoundersRegular', 'sans-serif'],
+        'headingFont': ['SkModernistRegular', 'serif'],
         'textBold': ['FoundersBold', 'sans-serif'],
         'headingBold': ['SkModernistBold', 'serif'],
       }

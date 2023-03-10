@@ -1,0 +1,1195 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "User",
+            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "file": "src/stories/User.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {}\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-958d4bfb24ce85b7095c0e22d6823ce802284d3ae4f84262205271545d8cda35ce103ab52da17093bb209de0c31b136c6cb6b26618ed7c847913881027ea8e98",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "'mtush-frontend'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss']\n})\nexport class AppComponent {\n  title = 'mtush-frontend';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<router-outlet></router-outlet>\n"
+        },
+        {
+            "name": "AuthComponent",
+            "id": "component-AuthComponent-a5a230578014c83cbb4500717c11fc1f9665a565ce73ceae4eaadd69a7e166c5af91ae0578c1a7506e6da280f4ec150f6e54468709a05164d85e3e0c9153f79b",
+            "file": "src/app/auth/auth.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-auth",
+            "styleUrls": [
+                "./auth.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./auth.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "login",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "viewPwd",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport {RouterLink} from \"@angular/router\";\n\n@Component({\n  selector: 'app-auth',\n  standalone: true,\n  imports: [CommonModule, RouterLink],\n  templateUrl: './auth.component.html',\n  styleUrls: ['./auth.component.scss']\n})\nexport class AuthComponent {\n  login: boolean= false;\n  viewPwd: boolean= false;\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./auth.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"bg-primaryYellow w-screen h-screen flex flex-col items-center\">\n  <img class=\"mt-20\" src=\"./assets/img/logo.svg\" alt=\"Mtush logo\" width=\"102\" height=\"95\">\n\n\n<!--  login form-->\n  <div *ngIf=\"!login\" class=\"my-20 w-[312px] bg-white rounded-2xl px-11 py-16\">\n    <p class=\"text-primaryGreen text-5xl font-textBold text-center\">Log In</p>\n    <form class=\"my-10 flex flex-col justify-between\">\n      <input\n        class=\"bg-[#FAF3E6] appearance-none\n        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11\"\n        type=\"text\"\n        placeholder=\"Email\">\n\n      <input\n        class=\"bg-[#FAF3E6] appearance-none\n        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11\"\n        type=\"password\"\n        placeholder=\"Password\">\n\n      <p class=\"text-2xl text-textYellow font-heading text-end cursor-pointer hover:underline \">Forgot password?</p>\n\n      <button role=\"button\" class=\"bg-primaryGreen mt-20 rounded-full text-white py-6 px-40 text-2xl font-bold hover:cursor-pointer\">Log in</button>\n    </form>\n    <p class=\"text-primaryGreen text-2xl text-heading text-center\">Don't have an account yet? <a class=\"text-textYellow cursor-pointer hover:underline\" (click)=\"login=true\"> Sign up</a></p>\n  </div>\n\n<!--  Sign up form-->\n  <div *ngIf=\"login\" class=\"my-20 w-[312px] bg-white rounded-2xl px-11 py-16\">\n    <p class=\"text-primaryGreen text-4xl font-textBold text-center\">Create Your Account</p>\n    <form class=\"my-10 flex flex-col justify-between\">\n      <input\n        class=\"bg-[#FAF3E6] appearance-none\n        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11\"\n        type=\"text\"\n        placeholder=\"Username\">\n\n      <input\n        class=\"bg-[#FAF3E6] appearance-none\n        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11\"\n        type=\"email\"\n        placeholder=\"Email\">\n\n      <input\n        class=\"bg-[#FAF3E6] appearance-none\n        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11\"\n        type=\"text\"\n        placeholder=\"Phone Number\">\n\n\n      <div class=\"flex items-center mb-11 mb-7 relative bg-[#FAF3E6] rounded-2xl\">\n        <input\n          class=\"appearance-none text-[#97AFA4] rounded-2xl w-full pr-16 py-8 px-4 text-2xl leading-tight focus:outline-none \"\n          [type]=\"viewPwd ? 'text' : 'password'\"\n          placeholder=\"Password\">\n        <div class=\"absolute right-6 hover:cursor-pointer\" (click)=\"viewPwd=!viewPwd\">\n          <svg *ngIf=\"!viewPwd\"  xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"w-6 h-6\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88\" />\n          </svg>\n          <svg *ngIf=\"viewPwd\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"w-6 h-6\">\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z\" />\n            <path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M15 12a3 3 0 11-6 0 3 3 0 016 0z\" />\n          </svg>\n        </div>\n      </div>\n\n\n      <p class=\"text-primaryGreen text-2xl text-heading text-center\">By creating an account, you agree to\n        <span class=\"text-textYellow cursor-pointer hover:underline\"> Mtush's Terms</span> and  <span class=\"text-textYellow cursor-pointer hover:underline\"> Privacy Policy</span>.</p>\n      <button class=\"bg-primaryGreen mt-10 rounded-full text-white py-6 px-40 text-2xl font-bold hover:cursor-pointer\">Log in</button>\n    </form>\n    <p class=\"text-primaryGreen text-2xl text-heading text-center\">Already have an account? <a class=\"text-textYellow cursor-pointer hover:underline\" (click)=\" login=false\"> Sign in</a></p>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-4ef205c97a334c309aa4001c8ab4a6d9571dcae18d0e85aaf0d367467ab5d3a9f13ab3573726f1fcb409bc9b49894dadfb80b1bbe1b6ba7041455ad9d4922004",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 711,
+                            "end": 724,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 712,
+                                "end": 720,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 40,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 20,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 32,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 46,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 48
+                    }
+                }
+            }
+        },
+        {
+            "name": "ComingSoonComponent",
+            "id": "component-ComingSoonComponent-ff90badfee463b75209c8fdff04026c103b8a1993fb90d6bcc83c9769941fd020e38379ebc8145b10dacbf2f337b58d9b038f313724e2557592b9ec6af8e7923",
+            "file": "src/app/shared/components/coming-soon/coming-soon.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-coming-soon",
+            "styleUrls": [
+                "./coming-soon.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./coming-soon.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-coming-soon',\n  templateUrl: './coming-soon.component.html',\n  styleUrls: ['./coming-soon.component.scss']\n})\nexport class ComingSoonComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./coming-soon.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"bg-primaryYellow w-screen h-screen flex flex-col items-center justify-between \">\n  <img class=\"mt-20\" src=\"./assets/img/logo.svg\" alt=\"Mtush logo\" width=\"102\" height=\"95\">\n  <h1 class=\"text-primaryGreen font-textBold text-6xl text-center\">Coming Soon.</h1>\n  <img src=\"./assets/img/coming-soon.webp\" alt=\"Mtush folded clothes\">\n</div>\n"
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-a557eec14f72c438a8033301f4d6ce023e0a1844a3b06ec2b38794a612acc31735ae78a5ee10071b230c8c20d699eb914554e69d07ade54adb371da8efb464cc",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 65,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 74,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 68,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 71,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n\n.welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "HomeComponent",
+            "id": "component-HomeComponent-94bf0beaa81164475d718ede83b362e569f88b07694d6f21a5ae031a567e5d00b311545dadc08951a785d3c0787ee013e75417be51b67353cc30a368b0f42939",
+            "file": "src/app/dashboard/components/home/home.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-home",
+            "styleUrls": [
+                "./home.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./home.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-home',\n  templateUrl: './home.component.html',\n  styleUrls: ['./home.component.scss']\n})\nexport class HomeComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./home.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<section class=\" w-screen bg-[#FAF3E6]\">\n  <div class=\"bg-primaryYellow rounded-b-3xl py-6 px-10\">\n    <div class=\"flex justify-between\">\n      <img src=\"./assets/img/logo.svg\" alt=\"Mtush logo\" width=\"65\" height=\"61\">\n      <a>\n        <img src=\"./assets/img/ham.svg\" alt=\"Mtush menu\" width=\"32\" height=\"32\">\n      </a>\n    </div>\n\n    <div class=\"flex items-center mt-11 mb-7 relative bg-white rounded-full\">\n      <img class=\"absolute left-6 \" src=\"./assets/img/search.svg\" alt=\"search icon\" width=\"18\" height=\"18\">\n      <input\n        class=\"appearance-none text-primaryGreen\n        rounded-full w-full pl-16 py-5 px-4 text-2xl leading-tight focus:outline-none \"\n        type=\"search\"\n        placeholder=\"Search for Items\">\n    </div>\n  </div>\n\n\n  <!-- Hero-->\n  <div class=\"my-20 space-y-20 flex flex-col justify-between items-center\">\n    <h1 class=\"text-primaryGreen text-6xl font-headingBold w-80 font-bold text-center\">Get <span\n      class=\"before:block before:absolute before:-inset-1 before:-skew-y-6 before:bg-primaryYellow before:rounded-2xl relative inline-block\"> <span\n      class=\"relative\">Mtush</span></span> at cheaper prices</h1>\n\n    <button class=\"bg-primaryGreen text-primaryYellow py-7 px-11  rounded-full text-2xl font-bold text-headingFont \">Start Shopping</button>\n\n    <div class=\"h-[24rem]\">\n      <img class=\"\" src=\"./assets/img/jeans.webp\" alt=\"Mtush image image\" width=\"264\" height=\"286\">\n    </div>\n  </div>\n</section>\n\n<section class=\"px-8 mt-44 py-4\">\n  <div class=\"flex items-center justify-between text-3xl text-primaryGreen font-bold text-headingFont mb-10\">\n    <p>Popular Sellers</p>\n    <p class=\"flex items-center gap-x-2\">See All\n      <img src=\"./assets/img/arrow-right.svg\" alt=\"Arrow right\" width=\"26\" height=\"26\">\n    </p>\n  </div>\n  <!-- The slider-->\n  <swiper\n    [slidesPerView]=\"'auto'\"\n    [spaceBetween]=\"10\">\n\n    <ng-template swiperSlide>\n      <div class=\"text-xl space-y-8\">\n        <img class=\"\" src=\"./assets/img/item.png\" alt=\"Shop Items\" width=\"131\" height=\"220\">\n        <div class=\"space-y-3\">\n          <div class=\"flex items-center justify-between mt-6-4\">\n            <p class=\"\">KES 250</p>\n            <p class=\"flex items-center gap-x-2 \">\n              <img class src=\"./assets/img/selected-fav.svg\" alt=\"Selected fav\" width=\"16\" height=\"14\">\n              7\n            </p>\n          </div>\n          <p>Size: L</p>\n          <p>Nike</p>\n          <p>Adams Arcade, Nairobi</p>\n        </div>\n      </div>\n    </ng-template>\n    <ng-template swiperSlide>\n      <div class=\"text-xl space-y-8\">\n        <img class=\"\" src=\"./assets/img/item.png\" alt=\"Shop Items\" width=\"131\" height=\"220\">\n        <div class=\"space-y-3\">\n          <div class=\"flex items-center justify-between mt-6-4\">\n            <p class=\"\">KES 250</p>\n            <p class=\"flex items-center gap-x-2 \">\n              <img class src=\"./assets/img/selected-fav.svg\" alt=\"Selected fav\" width=\"16\" height=\"14\">\n              7\n            </p>\n          </div>\n          <p>Size: L</p>\n          <p>Nike</p>\n          <p>Adams Arcade, Nairobi</p>\n        </div>\n      </div>\n    </ng-template>\n    <ng-template swiperSlide>\n      <div class=\"text-xl space-y-8\">\n        <img class=\"\" src=\"./assets/img/item.png\" alt=\"Shop Items\" width=\"131\" height=\"220\">\n        <div class=\"space-y-3\">\n          <div class=\"flex items-center justify-between mt-6-4\">\n            <p class=\"\">KES 250</p>\n            <p class=\"flex items-center gap-x-2 \">\n              <img class src=\"./assets/img/selected-fav.svg\" alt=\"Selected fav\" width=\"16\" height=\"14\">\n              7\n            </p>\n          </div>\n          <p>Size: L</p>\n          <p>Nike</p>\n          <p>Adams Arcade, Nairobi</p>\n        </div>\n      </div>\n    </ng-template>\n    <ng-template swiperSlide>\n      <div class=\"text-xl space-y-8\">\n        <img class=\"\" src=\"./assets/img/item.png\" alt=\"Shop Items\" width=\"131\" height=\"220\">\n        <div class=\"space-y-3\">\n          <div class=\"flex items-center justify-between mt-6-4\">\n            <p class=\"\">KES 250</p>\n            <p class=\"flex items-center gap-x-2 \">\n              <img class src=\"./assets/img/selected-fav.svg\" alt=\"Selected fav\" width=\"16\" height=\"14\">\n              7\n            </p>\n          </div>\n          <p>Size: L</p>\n          <p>Nike</p>\n          <p>Adams Arcade, Nairobi</p>\n        </div>\n      </div>\n    </ng-template>\n  </swiper>\n</section>\n\n<section class=\"px-8 mt-10 py-4\">\n  <p class=\"text-3xl font-bold text-headingFont\">Shop by Brand</p>\n  <div class=\"mt-[1.6rem] space-x-3 space-y-6\">\n    <button class=\"outline outline-1 rounded-full py-5 px-8 text-[1.2rem]\">Nike</button>\n    <button class=\"outline outline-1 rounded-full py-5 px-8 text-[1.2rem]\">Ralph Lauren</button>\n    <button class=\"outline outline-1 rounded-full py-5 px-8 text-[1.2rem]\">Adidas</button>\n    <button class=\"outline outline-1 rounded-full py-5 px-8 text-[1.2rem]\">New Balance</button>\n    <button class=\"outline outline-1 rounded-full py-5 px-8 text-[1.2rem]\">Puma</button>\n    <button class=\"outline outline-1 rounded-full py-5 px-8 text-[1.2rem]\">Vans</button>\n    <button class=\"outline outline-1 rounded-full py-5 px-8 text-[1.2rem]\">Burberry</button>\n    <button class=\"outline outline-1 rounded-full py-5 px-8 text-[1.2rem]\">Tommy Hilfiger</button>\n    <button class=\"outline outline-1 rounded-full py-5 px-8 text-[1.2rem]\">Reebok</button>\n  </div>\n</section>\n\n<section class=\"px-8 mt-16 py-4 bg-orange h-[50rem] py-[4.4rem] text-center space-y-[4rem]\">\n  <p class=\"text-white text-[3.2rem] font-bold text-textFont leading-[4rem]\">Sell your gently used clothes and make space for new items.</p>\n  <button class=\" bg-white py-[1.3rem] px-[4.7rem]  rounded-full text-[1.6rem] font-bold text-headingFont\">Sign Up</button>\n  <img src=\"./assets/img/cta.webp\" alt=\"Jackets shirts\" width=\"303\" height=\"202\">\n</section>\n\n<section class=\"px-8 mt-[5.1rem] py-4\">\n  <div class=\"flex items-center justify-between text-3xl text-primaryGreen font-bold text-headingFont mb-10\">\n    <p>Shop Popular Items</p>\n    <p class=\"flex items-center gap-x-2\">See All\n      <img src=\"./assets/img/arrow-right.svg\" alt=\"Arrow right\" width=\"26\" height=\"26\">\n    </p>\n  </div>\n  <!-- The slider-->\n  <swiper\n    [slidesPerView]=\"'auto'\"\n    [spaceBetween]=\"10\">\n\n    <ng-template swiperSlide>\n      <div class=\"text-xl space-y-8\">\n        <img class=\"\" src=\"./assets/img/item.png\" alt=\"Shop Items\" width=\"131\" height=\"220\">\n        <div class=\"space-y-3\">\n          <div class=\"flex items-center justify-between mt-6-4\">\n            <p class=\"\">KES 250</p>\n            <p class=\"flex items-center gap-x-2 \">\n              <img class src=\"./assets/img/selected-fav.svg\" alt=\"Selected fav\" width=\"16\" height=\"14\">\n              7\n            </p>\n          </div>\n          <p>Size: L</p>\n          <p>Nike</p>\n          <p>Adams Arcade, Nairobi</p>\n        </div>\n      </div>\n    </ng-template>\n    <ng-template swiperSlide>\n      <div class=\"text-xl space-y-8\">\n        <img class=\"\" src=\"./assets/img/item.png\" alt=\"Shop Items\" width=\"131\" height=\"220\">\n        <div class=\"space-y-3\">\n          <div class=\"flex items-center justify-between mt-6-4\">\n            <p class=\"\">KES 250</p>\n            <p class=\"flex items-center gap-x-2 \">\n              <img class src=\"./assets/img/selected-fav.svg\" alt=\"Selected fav\" width=\"16\" height=\"14\">\n              7\n            </p>\n          </div>\n          <p>Size: L</p>\n          <p>Nike</p>\n          <p>Adams Arcade, Nairobi</p>\n        </div>\n      </div>\n    </ng-template>\n    <ng-template swiperSlide>\n      <div class=\"text-xl space-y-8\">\n        <img class=\"\" src=\"./assets/img/item.png\" alt=\"Shop Items\" width=\"131\" height=\"220\">\n        <div class=\"space-y-3\">\n          <div class=\"flex items-center justify-between mt-6-4\">\n            <p class=\"\">KES 250</p>\n            <p class=\"flex items-center gap-x-2 \">\n              <img class src=\"./assets/img/selected-fav.svg\" alt=\"Selected fav\" width=\"16\" height=\"14\">\n              7\n            </p>\n          </div>\n          <p>Size: L</p>\n          <p>Nike</p>\n          <p>Adams Arcade, Nairobi</p>\n        </div>\n      </div>\n    </ng-template>\n    <ng-template swiperSlide>\n      <div class=\"text-xl space-y-8\">\n        <img class=\"\" src=\"./assets/img/item.png\" alt=\"Shop Items\" width=\"131\" height=\"220\">\n        <div class=\"space-y-3\">\n          <div class=\"flex items-center justify-between mt-6-4\">\n            <p class=\"\">KES 250</p>\n            <p class=\"flex items-center gap-x-2 \">\n              <img class src=\"./assets/img/selected-fav.svg\" alt=\"Selected fav\" width=\"16\" height=\"14\">\n              7\n            </p>\n          </div>\n          <p>Size: L</p>\n          <p>Nike</p>\n          <p>Adams Arcade, Nairobi</p>\n        </div>\n      </div>\n    </ng-template>\n  </swiper>\n</section>\n\n<footer class=\"mt-[12rem] bg-secondaryGreen h-[41.5rem]\" >\n\n</footer>\n"
+        },
+        {
+            "name": "NotFoundComponent",
+            "id": "component-NotFoundComponent-1bacd00c617bce15ec01b947c34729cd1cc6b0c3a3ca6a263be39fb881d2aef9def7071b0ff6d72bf31c78cac8f21714375b721536a5f877b69d807bea8e6f81",
+            "file": "src/app/shared/components/not-found/not-found.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-not-found",
+            "styleUrls": [
+                "./not-found.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./not-found.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-not-found',\n  templateUrl: './not-found.component.html',\n  styleUrls: ['./not-found.component.scss']\n})\nexport class NotFoundComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./not-found.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<div class=\"bg-primaryYellow w-screen h-screen flex flex-col items-center \">\n  <img class=\"mt-20\" src=\"./assets/img/logo.svg\" alt=\"Mtush logo\" width=\"102\" height=\"95\">\n  <img class=\"my-20\" src=\"./assets/img/404.svg\" alt=\"Mtush page not found\" width=\"242\" height=\"249\">\n  <button class=\"bg-primaryGreen mt-20 rounded-2xl text-white py-6 px-40 text-2xl font-bold\">Back to home</button>\n</div>\n"
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-7126d8c2607c946741c651482413b43feb72b2d63cac9d3ac173fde206a5e635eb4cdbf7ca7ac9327c7d4d05cf7ef619144c34c11609ad677081d0ee4e855064",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "User | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 64
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "doCreateAccount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 74,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 70,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 66,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 900;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": ""
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-8cf8ad789587d1045b97adb2322d51b64bc663902bab775cb01cbcfd3a7aed9c56ba95b240f8950736896e8d0661876449eaabd9bf741b8788a12869afb29f33",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { ComingSoonComponent } from './shared/components/coming-soon/coming-soon.component';\nimport { NotFoundComponent } from './shared/components/not-found/not-found.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    ComingSoonComponent,\n    NotFoundComponent\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "ComingSoonComponent"
+                        },
+                        {
+                            "name": "NotFoundComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-3d7da391012c4dae9a259091631b4e231f28aed5394f50232a5c68a3e1789d1ee0606c3fd0c3fb123a32b051c1242777f296241b71a0c16e58e5764e3ed7e84c",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport { AuthComponent } from './auth/auth.component';\nimport {ComingSoonComponent} from \"./shared/components/coming-soon/coming-soon.component\";\nimport { NotFoundComponent } from './shared/components/not-found/not-found.component';\n\nconst routes: Routes = [\n  {\n    path: 'coming-soon', component:ComingSoonComponent\n  },\n  {\n    path: 'login', component:AuthComponent\n  },\n  {\n    path: '',\n    loadChildren: () => \"import('./dashboard/dashboard.module').then(m => m.DashboardModule)\" },\n  {\n    path: '404', component:NotFoundComponent\n  },\n  {\n    path: '**', component:NotFoundComponent\n  }\n];\n\n@NgModule({\n  imports: [RouterModule.forRoot(routes)],\n  exports: [RouterModule]\n})\nexport class AppRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "DashboardModule",
+            "id": "module-DashboardModule-1fe21e8a3462c2442fb015064bc32db576cde67a093cb5c1ba047a64febc1e9c3dfcf1f059ffb423c741d7e604881ec18c9159ced801bbd8f9e3bc7a8ca48c1f",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/dashboard/dashboard.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { DashboardRoutingModule } from './dashboard-routing.module';\nimport { HomeComponent } from './components/home/home.component';\nimport {SwiperModule} from \"swiper/angular\";\n\n\n@NgModule({\n  declarations: [\n    HomeComponent\n  ],\n  imports: [\n    CommonModule,\n    DashboardRoutingModule,\n    SwiperModule\n  ]\n})\nexport class DashboardModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "HomeComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "DashboardRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "DashboardRoutingModule",
+            "id": "module-DashboardRoutingModule-3abf02effebfe681af8294671343b9066170d031d0e426fd55140e0d8725317315b01ab9322821186512a43cc579accc314534624e795e187d6a14cdd8753d73",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/dashboard/dashboard-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { RouterModule, Routes } from '@angular/router';\nimport {HomeComponent} from \"./components/home/home.component\";\n\nconst routes: Routes = [\n  {\n    path: '', component: HomeComponent,\n  },\n];\n\n@NgModule({\n  imports: [RouterModule.forChild(routes)],\n  exports: [RouterModule]\n})\nexport class DashboardRoutingModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Page>",
+                "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Header>",
+                    "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Page>",
+                    "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [
+                    {
+                        "path": "coming-soon",
+                        "component": "ComingSoonComponent"
+                    },
+                    {
+                        "path": "login",
+                        "component": "AuthComponent"
+                    },
+                    {
+                        "path": "",
+                        "loadChildren": "./dashboard/dashboard.module#DashboardModule",
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [
+                                    {
+                                        "name": "routes",
+                                        "filename": "src/app/dashboard/dashboard-routing.module.ts",
+                                        "module": "DashboardRoutingModule",
+                                        "children": [
+                                            {
+                                                "path": "",
+                                                "component": "HomeComponent"
+                                            }
+                                        ],
+                                        "kind": "module"
+                                    }
+                                ],
+                                "module": "DashboardModule"
+                            }
+                        ]
+                    },
+                    {
+                        "path": "404",
+                        "component": "NotFoundComponent"
+                    },
+                    {
+                        "path": "**",
+                        "component": "NotFoundComponent"
+                    }
+                ],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 4,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/auth/auth.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AuthComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/dashboard/components/home/home.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HomeComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/coming-soon/coming-soon.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ComingSoonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/not-found/not-found.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NotFoundComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/User.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            }
+        ]
+    }
+}

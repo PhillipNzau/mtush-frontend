@@ -1,74 +1,147 @@
-<div class="bg-primaryYellow w-screen h-screen flex flex-col items-center">
-  <img class="mt-20" src="./assets/img/logo.svg" alt="Mtush logo" width="102" height="95">
+<div class="flex h-screen w-screen flex-col items-center bg-primaryYellow">
+  <img
+    class="mt-20"
+    src="./assets/img/logo.svg"
+    alt="Mtush logo"
+    width="102"
+    height="95"
+  />
 
-
-<!--  login form-->
-  <div *ngIf="!login" class="my-20 w-[312px] bg-white rounded-2xl px-11 py-16">
-    <p class="text-primaryGreen text-5xl font-textBold text-center">Log In</p>
+  <!--  login form-->
+  <div *ngIf="!login" class="my-20 w-[312px] rounded-2xl bg-white px-11 py-16">
+    <p class="text-center font-textBold text-5xl text-primaryGreen">Log In</p>
     <form class="my-10 flex flex-col justify-between">
       <input
-        class="bg-[#FAF3E6] appearance-none
-        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11"
+        class="mb-11 w-full appearance-none rounded-2xl border-2 bg-[#FAF3E6] py-8 px-4 text-2xl leading-tight text-[#97AFA4] focus:outline-none"
         type="text"
-        placeholder="Email">
+        placeholder="Email"
+      />
 
       <input
-        class="bg-[#FAF3E6] appearance-none
-        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11"
+        class="mb-11 w-full appearance-none rounded-2xl border-2 bg-[#FAF3E6] py-8 px-4 text-2xl leading-tight text-[#97AFA4] focus:outline-none"
         type="password"
-        placeholder="Password">
+        placeholder="Password"
+      />
 
-      <p class="text-2xl text-textYellow font-heading text-end cursor-pointer hover:underline ">Forgot password?</p>
+      <p
+        class="font-heading cursor-pointer text-end text-2xl text-textYellow hover:underline"
+      >
+        Forgot password?
+      </p>
 
-      <button role="button" class="bg-primaryGreen mt-20 rounded-full text-white py-6 px-40 text-2xl font-bold hover:cursor-pointer">Log in</button>
+      <mtush-button
+        role="button"
+        buttonType="auth"
+        buttonLabel="Log In"
+      ></mtush-button>
     </form>
-    <p class="text-primaryGreen text-2xl text-heading text-center">Don't have an account yet? <a class="text-textYellow cursor-pointer hover:underline" (click)="login=true"> Sign up</a></p>
+    <p class="text-heading text-center text-2xl text-primaryGreen">
+      Don't have an account yet?
+      <a
+        class="cursor-pointer text-textYellow hover:underline"
+        (click)="login = true"
+      >
+        Sign up</a
+      >
+    </p>
   </div>
 
-<!--  Sign up form-->
-  <div *ngIf="login" class="my-20 w-[312px] bg-white rounded-2xl px-11 py-16">
-    <p class="text-primaryGreen text-4xl font-textBold text-center">Create Your Account</p>
+  <!--  Sign up form-->
+  <div *ngIf="login" class="my-10 w-[312px] rounded-2xl bg-white px-11 py-16">
+    <p class="text-center font-textBold text-4xl text-primaryGreen">
+      Create Your Account
+    </p>
     <form class="my-10 flex flex-col justify-between">
       <input
-        class="bg-[#FAF3E6] appearance-none
-        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11"
+        class="mb-11 w-full appearance-none rounded-2xl border-2 bg-[#FAF3E6] py-8 px-4 text-2xl leading-tight text-[#97AFA4] focus:outline-none"
         type="text"
-        placeholder="Username">
+        placeholder="Username"
+      />
 
       <input
-        class="bg-[#FAF3E6] appearance-none
-        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11"
+        class="mb-11 w-full appearance-none rounded-2xl border-2 bg-[#FAF3E6] py-8 px-4 text-2xl leading-tight text-[#97AFA4] focus:outline-none"
         type="email"
-        placeholder="Email">
+        placeholder="Email"
+      />
 
       <input
-        class="bg-[#FAF3E6] appearance-none
-        border-2 rounded-2xl w-full py-8 px-4 text-[#97AFA4] text-2xl leading-tight focus:outline-none mb-11"
+        class="mb-11 w-full appearance-none rounded-2xl border-2 bg-[#FAF3E6] py-8 px-4 text-2xl leading-tight text-[#97AFA4] focus:outline-none"
         type="text"
-        placeholder="Phone Number">
+        placeholder="Phone Number"
+      />
 
-
-      <div class="flex items-center mb-11 mb-7 relative bg-[#FAF3E6] rounded-2xl">
+      <div class="relative mb-7 flex items-center rounded-2xl bg-[#FAF3E6]">
         <input
-          class="appearance-none text-[#97AFA4] rounded-2xl w-full pr-16 py-8 px-4 text-2xl leading-tight focus:outline-none "
+          class="w-full appearance-none rounded-2xl py-8 px-4 pr-16 text-2xl leading-tight text-[#97AFA4] focus:outline-none"
           [type]="viewPwd ? 'text' : 'password'"
-          placeholder="Password">
-        <div class="absolute right-6 hover:cursor-pointer" (click)="viewPwd=!viewPwd">
-          <svg *ngIf="!viewPwd"  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88" />
+          placeholder="Password"
+        />
+        <div
+          class="absolute right-6 hover:cursor-pointer"
+          (click)="viewPwd = !viewPwd"
+        >
+          <svg
+            *ngIf="!viewPwd"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.98 8.223A10.477 10.477 0 001.934 12C3.226 16.338 7.244 19.5 12 19.5c.993 0 1.953-.138 2.863-.395M6.228 6.228A10.45 10.45 0 0112 4.5c4.756 0 8.773 3.162 10.065 7.498a10.523 10.523 0 01-4.293 5.774M6.228 6.228L3 3m3.228 3.228l3.65 3.65m7.894 7.894L21 21m-3.228-3.228l-3.65-3.65m0 0a3 3 0 10-4.243-4.243m4.242 4.242L9.88 9.88"
+            />
           </svg>
-          <svg *ngIf="viewPwd" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <svg
+            *ngIf="viewPwd"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"
+            />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+            />
           </svg>
         </div>
       </div>
 
-
-      <p class="text-primaryGreen text-2xl text-heading text-center">By creating an account, you agree to
-        <span class="text-textYellow cursor-pointer hover:underline"> Mtush's Terms</span> and  <span class="text-textYellow cursor-pointer hover:underline"> Privacy Policy</span>.</p>
-      <button class="bg-primaryGreen mt-10 rounded-full text-white py-6 px-40 text-2xl font-bold hover:cursor-pointer">Log in</button>
+      <p class="text-heading text-center text-2xl text-primaryGreen">
+        By creating an account, you agree to
+        <span class="cursor-pointer text-textYellow hover:underline">
+          Mtush's Terms</span
+        >
+        and
+        <span class="cursor-pointer text-textYellow hover:underline">
+          Privacy Policy</span
+        >.
+      </p>
+      <mtush-button
+        role="button"
+        buttonType="auth"
+        buttonLabel="Sign In"
+      ></mtush-button>
     </form>
-    <p class="text-primaryGreen text-2xl text-heading text-center">Already have an account? <a class="text-textYellow cursor-pointer hover:underline" (click)=" login=false"> Sign in</a></p>
+    <p class="text-heading text-center text-2xl text-primaryGreen">
+      Already have an account?
+      <a
+        class="cursor-pointer text-textYellow hover:underline"
+        (click)="login = false"
+      >
+        Sign in</a
+      >
+    </p>
   </div>
 </div>

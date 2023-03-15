@@ -1,0 +1,27 @@
+<div class="space-y-8 text-xl">
+  <img
+    class=""
+    src="./assets/img/item.png"
+    alt="Shop Items"
+    width="131"
+    height="220"
+  />
+  <div class="space-y-3">
+    <div class="mt-6-4 flex items-center justify-between">
+      <p class="">KES {{ item?.price }}</p>
+      <p class="flex items-center gap-x-2">
+        <img
+          class
+          [src]="'./assets/img/fav-' + item?.liked + '.svg'"
+          [alt]="'Selected favorite ' + item?.liked"
+          width="16"
+          height="14"
+        />
+        {{ item?.numberOfLikes }}
+      </p>
+    </div>
+    <p>Size: {{ item?.size }}</p>
+    <p>{{ item?.brand }}</p>
+    <p>{{ item?.location }}</p>
+  </div>
+</div>

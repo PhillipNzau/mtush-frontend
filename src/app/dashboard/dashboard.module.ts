@@ -6,6 +6,7 @@ import { HomeComponent } from './components/home/home.component';
 import {SwiperModule} from "swiper/angular";
 import { ButtonComponent } from "../shared/components/ui/button/button.component";
 import { ItemCardComponent } from "../shared/components/ui/item-card/item-card.component";
+import { BrandButtonComponent } from "../shared/components/ui/brand-button/brand-button.component";
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ItemCardComponent } from "../shared/components/ui/item-card/item-card.c
         DashboardRoutingModule,
         SwiperModule,
         ButtonComponent,
-        ItemCardComponent
+        ItemCardComponent,
+        BrandButtonComponent
     ]
 })
 export class DashboardModule { }

@@ -28,4 +28,6 @@ items:ItemCard[] = [
     numberOfLikes: 7,
   }
 ];
+
+brands: string[] = ['Nike', 'Adidas', 'Ralph Lauren', 'New Balance', 'Puma', 'Vans', 'Burberry', 'Tommy Hilfiger', 'Reebok']
 }

@@ -11,23 +11,17 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges} from 
 })
 
 export class ButtonComponent implements OnChanges {
-  @Input() buttonLabel:string = '';
+  @Input() buttonText:string = '';
   @Input() buttonType:string = '';
   @Output() buttonClickedEvent = new EventEmitter<any>();
-  isAuth: boolean = false;  
-  isLanding: boolean = false;
+
 
   buttonClicked() {
     this.buttonClickedEvent.emit();
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['buttonType'].currentValue === 'auth') {
-      this.isAuth = true;
-    }
-    if(changes['buttonType'].currentValue === 'landing') {
-      this.isLanding = true;
-    }
+ 
   }
   
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ItemCard } from 'src/app/shared/models/item-card';
 
 
@@ -30,12 +31,18 @@ export class HomeComponent implements OnInit {
   ];  
   brands: string[] = ['Nike', 'Adidas', 'Ralph Lauren', 'New Balance', 'Puma', 'Vans', 'Burberry', 'Tommy Hilfiger', 'Reebok'];
   isMenuOpen:boolean=false;
+  activeRoute:string=''
+
   
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {}
+
   ngOnInit(): void {
+    this.activeRoute=this.route.snapshot.url[0].path
+    
     
   }
+  //#TODO: check the bug nav back
   menuOpen() {
     this.isMenuOpen = !this.isMenuOpen
   }

@@ -65,7 +65,11 @@
   </div>
 
   <!-- sell button -->
-  <mtush-button *ngIf="isMenuOpen" buttonText="Sell Now"></mtush-button>
+  <mtush-button
+    *ngIf="isMenuOpen && !disableBtn"
+    buttonText="Sell Now"
+    (buttonClickedEvent)="navigate()"
+  ></mtush-button>
 </nav>
 <!-- menu -->
 <section

@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from "../button/button.component";
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
     selector: 'mtush-header',
@@ -9,12 +10,31 @@ import { ButtonComponent } from "../button/button.component";
     styleUrls: ['./header.component.scss'],
     imports: [CommonModule, ButtonComponent]
 })
-export class HeaderComponent {
-  @Input() isMenuOpen:boolean=false;
-  @Output() clickedEvent = new EventEmitter<any>()
+export class HeaderComponent implements OnInit {
 
-  buttonClicked(){
+  @Input() isMenuOpen:boolean=false;
+  @Input() activeRoute:string ='sell';
+  @Output() clickedEvent = new EventEmitter<any>();
+  disableBtn:boolean=false;
+
+  constructor(
+    private route: Router,
+    private currentRoute:ActivatedRoute
+  ) { }
+
+  ngOnInit(): void {
+    this.activeRoute = this.currentRoute.snapshot.url[0].path
+    if (this.activeRoute === 'sell') {
+      this.disableBtn = true
+    }   
+    
+  }
+
+  buttonClicked(){    
     this.clickedEvent.emit();
+  }
+  navigate() {
+    this.route.navigate(['/sell']);
   }
 
 

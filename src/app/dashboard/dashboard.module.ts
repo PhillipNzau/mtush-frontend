@@ -8,11 +8,13 @@ import { ButtonComponent } from "../shared/components/ui/button/button.component
 import { ItemCardComponent } from "../shared/components/ui/item-card/item-card.component";
 import { BrandButtonComponent } from "../shared/components/ui/brand-button/brand-button.component";
 import { HeaderComponent } from "../shared/components/ui/header/header.component";
+import { SellItemComponent } from './components/sell-item/sell-item.component';
 
 
 @NgModule({
     declarations: [
-        HomeComponent
+        HomeComponent,
+        SellItemComponent
     ],
     imports: [
         CommonModule,

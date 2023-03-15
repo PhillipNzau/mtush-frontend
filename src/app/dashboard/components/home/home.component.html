@@ -7,14 +7,48 @@
         width="65"
         height="61"
       />
-      <a>
-        <img
-          src="./assets/img/ham.svg"
-          alt="Mtush menu"
-          width="32"
-          height="32"
-        />
-      </a>
+      <div class="flex items-center space-x-5">
+        <a href="">
+          <img
+            src="./assets/img/chats.svg"
+            alt="Notification Icon"
+            width="32"
+            height="32"
+          />
+        </a>
+        <a href="">
+          <img
+            src="./assets/img/notification.svg"
+            alt="Notification Icon"
+            width="32"
+            height="32"
+          />
+        </a>
+        <a href="">
+          <img
+            src="./assets/img/favorite.svg"
+            alt="Notification Icon"
+            width="32"
+            height="32"
+          />
+        </a>
+        <a (click)="menuOpen()">
+          <img
+            *ngIf="!isMenuOpen"
+            src="./assets/img/ham.svg"
+            alt="Mtush menu"
+            width="32"
+            height="32"
+          />
+          <img
+            *ngIf="isMenuOpen"
+            src="./assets/img/close.svg"
+            alt="Mtush menu"
+            width="32"
+            height="32"
+          />
+        </a>
+      </div>
     </div>
 
     <div class="relative mt-11 mb-7 flex items-center rounded-full bg-white">
@@ -100,7 +134,7 @@
 </section>
 
 <section
-  class="mt-16 h-[50rem] space-y-[4rem] bg-orange px-8 py-[4.4rem] text-center"
+  class="mt-16 flex h-[50rem] flex-col items-center space-y-[4rem] bg-orange px-8 py-[4.4rem] text-center"
 >
   <p class="text-textFont text-[3.2rem] font-bold leading-[4rem] text-white">
     Sell your gently used clothes and make space for new items.

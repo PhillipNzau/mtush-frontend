@@ -70,7 +70,7 @@
     class="text-headingFont mb-10 flex items-center justify-between text-3xl font-bold text-primaryGreen"
   >
     <p>Popular Sellers</p>
-    <p class="flex items-center gap-x-2">
+    <p class="flex items-center gap-x-2 hover:cursor-pointer">
       See All
       <img
         src="./assets/img/arrow-right.svg"
@@ -82,121 +82,8 @@
   </div>
   <!-- The slider-->
   <swiper [slidesPerView]="'auto'" [spaceBetween]="10">
-    <ng-template swiperSlide>
-      <div class="space-y-8 text-xl">
-        <img
-          class=""
-          src="./assets/img/item.png"
-          alt="Shop Items"
-          width="131"
-          height="220"
-        />
-        <div class="space-y-3">
-          <div class="mt-6-4 flex items-center justify-between">
-            <p class="">KES 250</p>
-            <p class="flex items-center gap-x-2">
-              <img
-                class
-                src="./assets/img/selected-fav.svg"
-                alt="Selected fav"
-                width="16"
-                height="14"
-              />
-              7
-            </p>
-          </div>
-          <p>Size: L</p>
-          <p>Nike</p>
-          <p>Adams Arcade, Nairobi</p>
-        </div>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div class="space-y-8 text-xl">
-        <img
-          class=""
-          src="./assets/img/item.png"
-          alt="Shop Items"
-          width="131"
-          height="220"
-        />
-        <div class="space-y-3">
-          <div class="mt-6-4 flex items-center justify-between">
-            <p class="">KES 250</p>
-            <p class="flex items-center gap-x-2">
-              <img
-                class
-                src="./assets/img/selected-fav.svg"
-                alt="Selected fav"
-                width="16"
-                height="14"
-              />
-              7
-            </p>
-          </div>
-          <p>Size: L</p>
-          <p>Nike</p>
-          <p>Adams Arcade, Nairobi</p>
-        </div>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div class="space-y-8 text-xl">
-        <img
-          class=""
-          src="./assets/img/item.png"
-          alt="Shop Items"
-          width="131"
-          height="220"
-        />
-        <div class="space-y-3">
-          <div class="mt-6-4 flex items-center justify-between">
-            <p class="">KES 250</p>
-            <p class="flex items-center gap-x-2">
-              <img
-                class
-                src="./assets/img/selected-fav.svg"
-                alt="Selected fav"
-                width="16"
-                height="14"
-              />
-              7
-            </p>
-          </div>
-          <p>Size: L</p>
-          <p>Nike</p>
-          <p>Adams Arcade, Nairobi</p>
-        </div>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div class="space-y-8 text-xl">
-        <img
-          class=""
-          src="./assets/img/item.png"
-          alt="Shop Items"
-          width="131"
-          height="220"
-        />
-        <div class="space-y-3">
-          <div class="mt-6-4 flex items-center justify-between">
-            <p class="">KES 250</p>
-            <p class="flex items-center gap-x-2">
-              <img
-                class
-                src="./assets/img/selected-fav.svg"
-                alt="Selected fav"
-                width="16"
-                height="14"
-              />
-              7
-            </p>
-          </div>
-          <p>Size: L</p>
-          <p>Nike</p>
-          <p>Adams Arcade, Nairobi</p>
-        </div>
-      </div>
+    <ng-template swiperSlide *ngFor="let item of items">
+      <mtush-item-card [item]="item"></mtush-item-card>
     </ng-template>
   </swiper>
 </section>

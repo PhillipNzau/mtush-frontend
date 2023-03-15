@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { ComingSoonComponent } from './shared/components/coming-soon/coming-soon.component';
 import { NotFoundComponent } from './shared/components/not-found/not-found.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     ComingSoonComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

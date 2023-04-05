@@ -17,6 +17,8 @@ export class ButtonComponent implements OnChanges {
 
 
   buttonClicked() {
+    console.log('ere');
+
     this.buttonClickedEvent.emit();
   }
 

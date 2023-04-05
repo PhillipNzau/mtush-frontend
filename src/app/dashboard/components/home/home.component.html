@@ -1,5 +1,5 @@
 <div [ngClass]="{ 'h-screen overflow-hidden': isMenuOpen }">
-  <section class="w-screen bg-[#FAF3E6]">
+  <section class="w-screen bg-primaryBg">
     <!-- header-->
     <mtush-header
       [isMenuOpen]="isMenuOpen"
@@ -68,7 +68,7 @@
   <!-- Brand Section -->
   <section class="mt-10 px-8 py-4">
     <p class="text-headingFont text-3xl font-bold">Shop by Brand</p>
-    <div class="mt-[2.5rem] space-x-3">
+    <div class="mt-[2.5rem]">
       <mtush-brand-button
         *ngFor="let brand of brands"
         [buttonText]="brand"

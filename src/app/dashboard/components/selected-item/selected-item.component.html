@@ -1,0 +1,43 @@
+<div
+  class="h-auto min-h-screen bg-primaryBg"
+  [ngClass]="{ 'h-screen overflow-hidden': isMenuOpen }"
+>
+  <section class="w-screen">
+    <!-- header-->
+    <mtush-header
+      [isMenuOpen]="isMenuOpen"
+      [activeRoute]="activeRoute"
+      (clickedEvent)="menuOpen()"
+    ></mtush-header>
+  </section>
+
+  <section class="grid grid-cols-2 grid-rows-2 gap-1">
+    <div class="col-span-1 min-h-[20rem] bg-green-400">
+      <img
+        class="h-full w-full object-cover"
+        src="./assets/img/img1.webp"
+        alt=""
+      />
+    </div>
+    <div class="col-span-1 row-span-2 bg-blue-500">
+      <img
+        class="h-full w-full object-cover"
+        src="./assets/img/img3.webp"
+        alt=""
+      />
+    </div>
+    <div class="col-span-1 min-h-[20rem] bg-yellow-400">
+      <img
+        class="h-full w-full object-cover"
+        src="./assets/img/img2.webp"
+        alt=""
+      />
+    </div>
+  </section>
+
+  <p>Home / Women / Shoes</p>
+  <section class="mx-4 mt-8 min-h-[40rem] bg-white">
+    <p class="mb-10 bg-white py-10 px-10 text-5xl drop-shadow-md">KES 700</p>
+    <div class="bg-white py-10 px-6 text-5xl drop-shadow-md"></div>
+  </section>
+</div>

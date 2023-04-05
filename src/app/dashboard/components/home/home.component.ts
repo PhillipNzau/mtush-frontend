@@ -38,11 +38,11 @@ export class HomeComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.activeRoute=this.route.snapshot.url[0].path
+    this.activeRoute=this.route?.snapshot?.url[0]?.path;
     
     
   }
-  //#TODO: check the bug nav back
+ 
   menuOpen() {
     this.isMenuOpen = !this.isMenuOpen
   }

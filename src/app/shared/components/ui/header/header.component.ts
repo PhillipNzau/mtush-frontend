@@ -1,14 +1,14 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from "../button/button.component";
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router,  RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
     selector: 'mtush-header',
     standalone: true,
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
-    imports: [CommonModule, ButtonComponent]
+    imports: [CommonModule, ButtonComponent,  RouterLink, RouterLinkActive]
 })
 export class HeaderComponent implements OnInit {
 
@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.activeRoute = this.currentRoute.snapshot.url[0].path
+    this.activeRoute = this.currentRoute?.snapshot?.url[0]?.path
     if (this.activeRoute === 'sell') {
       this.disableBtn = true
     }   
@@ -32,6 +32,7 @@ export class HeaderComponent implements OnInit {
 
   buttonClicked(){    
     this.clickedEvent.emit();
+    
   }
   navigate() {
     this.route.navigate(['/sell']);
